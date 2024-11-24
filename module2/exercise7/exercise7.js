@@ -1,8 +1,9 @@
 'use strict'
 
+
 function getNumber() {
-  // floor will lead to the closest integer down
-  let roll_number= Math.floor((Math.random() * 6) + 1);
+  let dice = parseInt(prompt("Give a number"))
+  let roll_number = Math.floor((Math.random() * dice) + 1);
   return roll_number;
 }
 
@@ -14,12 +15,9 @@ function roll_check(){
     point = getNumber()
     result.push(point)
     console.log(`Rolled:${point}`)
-  } while (point !== 6);
+  } while (point !== dice);
 
   console.log(result)
 }
 
 roll_check();
-
-
-
