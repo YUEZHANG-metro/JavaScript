@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Task1</title>
+    <script src="task1.js" defer></script>
 </head>
 <body>
-  <form action="https://api.tvmaze.com/search/shows">
-    <input id="query" name="q" type="text">
-    <input type="submit" value="Search"> ?
-</form>
+  <h1>Search for a TV Series</h1>
+  <form id="search-form">
+    <input id="query" name="q" type="text" placeholder="Enter TV series name">
+    <input type="submit" value="Search">
+  </form>
+
+  <pre id="output"></pre> <!-- To display the results -->
 </body>
 </html>
