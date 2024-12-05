@@ -1,13 +1,15 @@
 'use strict'
+const html = document.createElement('p')
+document.body.appendChild(html)
+const items = ['Johnny', 'DeeDee', 'Joey','Marky']
 
 function concat(items) {
-  // const items = []
-  let result = ''
+  let result='';
   for (let i = 0; i < items.length; i++) {
     result += items[i]
   }
   return result
 }
-const names = ['Johnny', 'DeeDee', 'Joey', 'Marky']
-let result = concat(names)
-console.log(concat())
+
+html.innerHTML = concat(items);
+

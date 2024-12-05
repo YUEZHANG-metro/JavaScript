@@ -1,9 +1,10 @@
 'use strict'
 
+const listHtml = document.createElement('ul')
+document.body.appendChild(listHtml);
+
 function getNumber() {
-  // floor will lead to the closest integer down
-  let roll_number= Math.floor((Math.random() * 6) + 1);
-  return roll_number;
+  return Math.floor((Math.random() * 6) + 1);;
 }
 
 function roll_check(){
@@ -17,9 +18,13 @@ function roll_check(){
   } while (point !== 6);
 
   console.log(result)
+  for (const r of result) {
+    const listItem = document.createElement('li');
+    listItem.textContent = `Rolled: ${r}`;
+    listHtml.appendChild(listItem);
+  }
 }
 
-roll_check();
 
 
 
